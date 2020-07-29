@@ -16,9 +16,9 @@ Small Alpine based Docker image with Terraform, azure-cli, kubectl and Helm.
 * [gettext](https://pkgs.alpinelinux.org/package/v3.11/main/x86_64/gettext)
 
 # Installed packages (pip)
-* [azure-cli](https://pypi.org/project/azure-cli) `2.0.81`
+* [azure-cli](https://pypi.org/project/azure-cli) `2.7.0`
 
 # Installed packages (go binaries)
-* [terraform](https://www.terraform.io/downloads.html) `0.12.21`
-* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) `v1.15.9`
+* [terraform](https://www.terraform.io/downloads.html) `0.12.29`
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) `v1.16.10`
 * [helm](https://github.com/helm/helm/releases) `v3.0.3`
