@@ -32,3 +32,19 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/$KUBE_VERS
 # Install Helm
 RUN curl https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar -xzO linux-amd64/helm > /usr/local/bin/helm && \
     chmod +x /usr/local/bin/helm
+
+RUN mkdir -p /home/jenkins/.azure
+RUN addgroup -S jenkins -g 1000 && \
+    adduser \
+    --disabled-password \
+    --gecos "" \
+    --ingroup jenkins \
+    --no-create-home \
+    --uid 1000 \
+    jenkins && \
+    chown 1000:1000 -R /home && \
+    chown 1000:1000 -R /usr && \
+    chmod 777 -R /home && \
+    chmod 777 -R /usr
+
+USER 1000:1000
